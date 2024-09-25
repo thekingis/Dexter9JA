@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainView"
+    android:background="@color/white"
+    tools:context=".CreateAccountAct">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sthetic_bg"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerText"
+        android:background="@color/primary"
+        android:padding="15dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true" />
+
+    <com.dexter9ja.android.Views.CornerBorderRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/containerView"
+        android:layout_centerInParent="true"
+        android:background="@color/primaryFade"
+        android:layout_margin="20dp"
+        app:borderRadius="60"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textV"
+            android:paddingVertical="15dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_alignParentTop="true"
+            android:text="@string/create_account"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameView"
+            android:layout_below="@+id/textV"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstName"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="19sp"
+                android:inputType="text"
+                android:background="@drawable/border_background_white"
+                android:hint="@string/first_name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastName"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border_background_white"
+                android:hint="@string/last_name"  />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailView"
+            android:layout_below="@+id/textV"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="19sp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/border_background_white"
+                android:hint="@string/email" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/confirmEmail"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/border_background_white"
+                android:hint="@string/confirm_email"  />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordView"
+            android:layout_below="@+id/textV"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/password"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="19sp"
+                android:inputType="textPassword"
+                android:background="@drawable/border_background_white"
+                android:hint="@string/password" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/confirmPassword"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:inputType="textPassword"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/border_background_white"
+                android:hint="@string/confirm_password"  />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hintsView"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detailsView"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="19sp"
+                android:inputType="text"
+                android:drawablePadding="10dp"
+                android:background="@drawable/border_background_white"
+                android:hint="@string/username" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datePicker"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:textSize="19sp"
+                android:background="@drawable/border_background_white"
+                android:hint="@string/date_of_birth" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phoneNumber"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:inputType="phone"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/border_background_white"
+                android:hint="@string/phone_number"  />
+
+        </LinearLayout>
+
+    </com.dexter9ja.android.Views.CornerBorderRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomLayout"
+        android:orientation="horizontal"
+        android:background="@color/deepWhite"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/prevBtn"
+            android:text="@string/back"
+            android:background="@drawable/button_trans"
+            android:textAllCaps="false"
+            android:textColor="@color/dark"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_weight="0.5"
+            android:visibility="invisible"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextBtn"
+            android:text="@string/next"
+            android:background="@drawable/button_trans"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:layout_gravity="end"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:clickable="true"
+            tools:ignore="RelativeOverlap"
+            android:focusable="true"
+            android:layout_weight="0.5"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/createBtn"
+            android:text="@string/create_account"
+            android:background="@drawable/button_primary_border_white"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_gravity="end"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:clickable="true"
+            tools:ignore="RelativeOverlap"
+            android:focusable="true"
+            android:layout_weight="0.5"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/datePickerView"
+        android:background="@color/blackFade"
+        android:gravity="center"
+        android:clickable="false"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarView"
+            android:background="@color/white"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_primary"
+            android:layout_marginTop="20dp"
+            android:textSize="19sp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="18dp"
+            android:id="@+id/doneBtn"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:text="@string/done"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/blackFade"
+        android:paddingHorizontal="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/blackFade">
+
+    </LinearLayout>
+
+</RelativeLayout>

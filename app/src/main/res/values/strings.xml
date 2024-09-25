@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Dexter9JA</string>
+    <string name="todo">TODO</string>
+    <string name="email">Email…</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Create Account</string>
+    <string name="first_name">First Name…</string>
+    <string name="last_name">Last Name…</string>
+    <string name="confirm_email">Confirm Email…</string>
+    <string name="confirm_password">Confirm Password…</string>
+    <string name="username">Username</string>
+    <string name="parent_s_email">Parent\'s Email…</string>
+    <string name="date_of_birth">Date of Birth…</string>
+    <string name="done">Done</string>
+    <string name="next">Next</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="back">Back</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="from_excitement_to_code_mastery">From Excitement to Code Mastery!</string>
+    <string name="explore">Explore</string>
+    <string name="account">Account</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="courses_to_do">Courses To Do</string>
+    <string name="completed_courses">Completed Courses</string>
+    <string name="task_to_complete">Task To Complete</string>
+    <string name="see_certificates">See Certificates</string>
+    <string name="see_awards">See Awards</string>
+    <string name="recent_courses">Recent Courses</string>
+</resources>

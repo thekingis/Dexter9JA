@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:id="@+id/mainView"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/containerView"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="30dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:animateLayoutChanges="true">
+
+        <com.dexter9ja.android.Views.RoundRelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/dexterPoint"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/appNameTextView"
+                android:textColor="@color/primary"
+                android:layout_centerInParent="true"
+                android:textStyle="bold|italic"
+                android:textSize="35sp"/>
+
+        </com.dexter9ja.android.Views.RoundRelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainLayout"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomLayout">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewSlider"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/dext1" />
+
+            <com.dexter9ja.android.Views.TrapezoidView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/primaryFade"
+                android:layout_alignParentBottom="true">
+
+                <TextSwitcher
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sliderTextSwitcher"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="50dp"
+                    android:text="@string/from_excitement_to_code_mastery"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </TextSwitcher>
+
+            </com.dexter9ja.android.Views.TrapezoidView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomLayout"
+            android:orientation="horizontal"
+            android:background="@color/deepWhite"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/exploreBtn"
+                android:text="@string/explore"
+                android:background="@drawable/button_trans"
+                android:textAllCaps="false"
+                android:textColor="@color/primary"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_weight="0.5"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/accountBtn"
+                android:text="@string/account"
+                android:background="@drawable/button_trans"
+                android:textAllCaps="false"
+                android:textColor="@color/primary"
+                android:layout_gravity="end"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:clickable="true"
+                tools:ignore="RelativeOverlap"
+                android:focusable="true"
+                android:layout_weight="0.5" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

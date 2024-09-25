@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainView"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sthetic_bg"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerText"
+        android:background="@color/primary"
+        android:padding="15dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true" />
+
+    <com.dexter9ja.android.Views.CornerBorderLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryFade"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="40dp"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        app:borderRadius="60">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/login"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/usernameBox"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="50dp"
+            android:textSize="19sp"
+            android:background="@drawable/border_background_white"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_person"
+            android:hint="@string/username" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordBox"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_background_white"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_key"
+            android:hint="@string/password"  />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <com.dexter9ja.android.Views.CornerBorderTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/errorLogTextView"
+            android:visibility="gone"
+            android:background="@color/red"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:borderRadius="10"
+            android:textColor="@color/white"
+            android:layout_marginVertical="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_border_primary_pressed"
+                android:textSize="19sp"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="10dp"
+                android:id="@+id/loginBtn"
+                android:textColor="@color/white"
+                android:elevation="2dp"
+                android:text="@string/login" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageLoader"
+                android:src="@drawable/img_loader"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:visibility="gone"
+                android:elevation="3dp"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+    </com.dexter9ja.android.Views.CornerBorderLinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomLayout"
+        android:orientation="horizontal"
+        android:background="@color/deepWhite"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgotPasswordBtn"
+            android:text="@string/forgot_password"
+            android:background="@drawable/button_trans"
+            android:textAllCaps="false"
+            android:textColor="@color/dark"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_weight="0.5"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/createAccountBtn"
+            android:text="@string/create_an_account"
+            android:background="@drawable/button_trans"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:layout_gravity="end"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:clickable="true"
+            tools:ignore="RelativeOverlap"
+            android:focusable="true"
+            android:layout_weight="0.5"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+</RelativeLayout>
